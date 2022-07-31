@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-request.open('GET', 'https://api.adviceslip.com/advice', true);
+
 
 request.onload = function() {
   if (this.status >= 200 && this.status < 400) {
@@ -19,9 +19,16 @@ request.onerror = function() {
   
 };
 
-request.send();
+
+function getData() {
+  request.open('GET', 'https://api.adviceslip.com/advice?', true);
+  request.send();
+}
 
 function changeAdvice(id, advice) {
   document.querySelector("#advice_number").innerHTML = id;
   document.querySelector(".card_content").innerHTML = '"' + advice + '"';
 }
+
+
+getData();

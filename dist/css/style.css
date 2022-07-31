@@ -101,6 +101,10 @@ main {
   border-radius: 100%;
 }
 
+.card_button:hover {
+  box-shadow: 0px 0px 30px 0px #52ffa8;
+}
+
 .divider {
   margin: 2rem;
 }
